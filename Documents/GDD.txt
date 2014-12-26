@@ -1,0 +1,15 @@
+High Concept:
+A 3rd person dodging game using two buttons where you avoid obstacles that fly at you from a forward direction. This is a training course that is given by Cooking with Unity.  
+
+Story:
+
+Obstacles:
+Cubes. Spheres. Pomades.  Cones.
+
+Level Variations:
+Inside a tube?
+
+Notes:
+On Ep.3 right now. Was shown what a GDD was and its importance. 
+
+Weapons:
