@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Move : MonoBehaviour 
 {
-	public Vector3 direction = Vector3.forward;
+	public Vector3 direction;
 	public float speed = 1.0f;
 
 	void Start () 

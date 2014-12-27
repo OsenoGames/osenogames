@@ -192,6 +192,7 @@ MonoBehaviour:
   maxY: 0
   minSpawnTime: .100000001
   maxSpawnTime: .5
+  speed: .5
 --- !u!4 &282745964
 Transform:
   m_ObjectHideFlags: 0
@@ -455,9 +456,56 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034466920}
-  m_LocalRotation: {x: .416347206, y: 0, z: 0, w: .909205794}
+  m_LocalRotation: {x: .296869576, y: 0, z: 0, w: .954918087}
   m_LocalPosition: {x: 0, y: 25.0799999, z: 45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &2120403454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2120403456}
+  - 114: {fileID: 2120403455}
+  m_Layer: 0
+  m_Name: Pillar Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2120403455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2120403454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c7af0faf5f3194ba83ad539e854600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  things: {fileID: 112396, guid: c5929ebae2cf32c4cafd38a7de715bee, type: 2}
+  minX: -50
+  maxX: 50
+  minY: 0
+  maxY: 0
+  minSpawnTime: .100000001
+  maxSpawnTime: .5
+  speed: .5
+--- !u!4 &2120403456
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2120403454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 122.900002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
