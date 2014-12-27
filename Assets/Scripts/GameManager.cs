@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
 	private bool gameOver = false;
 	private float score = 0.0f;
 	public float gameSpeed = 20.0f;
-
+	private bool hasSaved = false;
 	void Start () 
 	{
 		Instance = this;
-		//Coroutine ("onGUI");
+		LoadHighScore();
 	}
 	
 	void Update () 
@@ -30,11 +30,14 @@ public class GameManager : MonoBehaviour
 		if(GameObject.FindGameObjectWithTag("Player") == null)
 		{
 			gameOver = true;
-			//Coroutine ("onGUI");
 
 		}
 		if(gameOver)
 		{
+			if(!hasSaved)
+			{
+				SaveHighScore();
+			}
 			if(Input.anyKeyDown)
 			{
 				Application.LoadLevel(Application.loadedLevel);
@@ -43,6 +46,17 @@ public class GameManager : MonoBehaviour
 		}
 
 	}
+
+	void SaveHighScore()
+	{
+		PlayerPrefs.SetInt("HighScore", (int)highScore);
+		PlayerPrefs.Save();
+	}
+	void LoadHighScore()
+	{
+		highScore = PlayerPrefs.GetInt("HighScore");
+	}
+
 	void OnGUI()
 	{
 		//int currentScore = (int)score;
