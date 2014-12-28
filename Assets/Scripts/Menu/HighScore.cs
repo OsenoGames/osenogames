@@ -4,13 +4,11 @@ using System.Collections;
 
 public class HighScore : MonoBehaviour 
 {
-
 	Text text;
 
 	void Awake()
 	{
  		text = GetComponent<Text>();
-
 	}
 
 	void Start () 
