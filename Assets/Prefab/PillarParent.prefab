@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3365432}
   - 136: {fileID: 13665432}
   - 23: {fileID: 2365432}
-  - 114: {fileID: 11499374}
+  - 64: {fileID: 6446862}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 165432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0500000007, y: 1, z: 1}
+  m_LocalScale: {x: .0500000007, y: 1, z: .0500000007}
   m_Children:
   - {fileID: 465430}
   m_Father: {fileID: 0}
@@ -106,6 +106,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &6446862
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 1
+  m_Convex: 0
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &11415040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,18 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -20
---- !u!114 &11499374
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165430}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5689088110f35488f78311f6be1075, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yRotation: 50
 --- !u!136 &13665432
 CapsuleCollider:
   m_ObjectHideFlags: 1
