@@ -3,23 +3,18 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour 
 {
-	public float pointPerUnit = 1.0f;
+	public float pointPerUnit = 5.0f;
 	public static GameManager Instance;
 	public float gameSpeed = 20.0f;
-	public string titleScreenName = "TitleScreen";
-
 
 	private static float highScore = 0.0f;
 	private bool gameOver = false;
 	private float score = 0.0f;
-	private bool hasSaved = false;
-	int hs1 = 0;
-	int hs2 = 0;
-	int hs3 = 0;
-	int hs4 = 0;
-	int hs5 = 0;
-	int scin = 0;
-
+	private int hs1 = 0;
+	private int hs2 = 0;
+	private int hs3 = 0;
+	private int hs4 = 0;
+	private int hs5 = 0;
 
 	void Start () 
 	{
@@ -32,7 +27,6 @@ public class GameManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 		LoadHighScore();
-		//DontDestroyOnLoad(gameObject);
 	}
 	
 	void Update () 
@@ -49,26 +43,16 @@ public class GameManager : MonoBehaviour
 		if(GameObject.FindGameObjectWithTag("Player") == null)
 		{
 			gameOver = true;
-
 		}
 		if(gameOver)
 		{
-			if(!hasSaved)
-			{
-				SaveHighScore();
-				SaveScore();
-			}
-			else
-			{
-				SaveScore();
-			}
+			SaveScore();
+			SaveHighScore();
 			if(Input.anyKeyDown)
 			{
-				Application.LoadLevel(titleScreenName);
+				Application.LoadLevel("TitleScreen");
 			}
-
 		}
-
 	}
 	void SaveScore()
 	{
@@ -77,7 +61,7 @@ public class GameManager : MonoBehaviour
 	}
 	void SaveHighScore()
 	{
-		scin = (int)score;
+		int scin = (int)score;
 		if(scin >= hs1)
 		{
 			PlayerPrefs.SetInt("H5", hs4);
@@ -123,7 +107,7 @@ public class GameManager : MonoBehaviour
 	}
 	void LoadHighScore()
 	{
-		highScore = PlayerPrefs.GetInt("HighScore");
+		hs1 = PlayerPrefs.GetInt("HighScore");
 		hs1 = PlayerPrefs.GetInt("H1",0);
 		hs2 = PlayerPrefs.GetInt("H2",0);
 		hs3 = PlayerPrefs.GetInt("H3",0);
