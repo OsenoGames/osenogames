@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 	private int hs4 = 0;
 	private int hs5 = 0;
 
-	void Start () 
+	void Awake () 
 	{
 		if(Instance == null)
 		{
@@ -27,8 +27,9 @@ public class GameManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 		LoadHighScore();
+		highScore = hs1;
 	}
-	
+
 	void Update () 
 	{
 		if(!gameOver)
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
 			score += pointPerUnit*gameSpeed*Time.deltaTime;
 			if(score>highScore)
 			{
+
 				highScore = score;
 			}
 		}
@@ -107,7 +109,6 @@ public class GameManager : MonoBehaviour
 	}
 	void LoadHighScore()
 	{
-		hs1 = PlayerPrefs.GetInt("HighScore");
 		hs1 = PlayerPrefs.GetInt("H1",0);
 		hs2 = PlayerPrefs.GetInt("H2",0);
 		hs3 = PlayerPrefs.GetInt("H3",0);

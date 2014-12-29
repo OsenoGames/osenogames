@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3082e1157e7b24791a3faa14146e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointPerUnit: 1
+  pointPerUnit: 5
   gameSpeed: 20
 --- !u!1001 &100100000
 Prefab:

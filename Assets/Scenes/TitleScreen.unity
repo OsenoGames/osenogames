@@ -882,7 +882,7 @@ GameObject:
   - 222: {fileID: 2074874546}
   - 114: {fileID: 2074874545}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Titla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

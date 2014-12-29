@@ -13,6 +13,6 @@ public class HighScore : MonoBehaviour
 
 	void Start () 
 	{
-		text.text = "Highscore: " + PlayerPrefs.GetInt("HighScore");
+		text.text = "Highscore: " + PlayerPrefs.GetInt("H1");
 	}
 }
