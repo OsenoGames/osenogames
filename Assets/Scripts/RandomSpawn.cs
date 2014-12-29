@@ -11,6 +11,7 @@ public class RandomSpawn : MonoBehaviour
 	public float minSpawnTime = 1.0f;
 	public float maxSpawnTime = 1.0f;
 	public float speed = .5f;
+	public float rotation = 50.0f;
 
 
 	void Start () 
@@ -28,7 +29,6 @@ public class RandomSpawn : MonoBehaviour
 	{
 		Instantiate(things, transform.position + new Vector3(Random.Range(minX, maxX),(Random.Range(minY, maxY))),Quaternion.identity);
 		Invoke("SpawnNow", Random.Range(minSpawnTime, maxSpawnTime));
-
 	}
 
 

@@ -193,6 +193,7 @@ MonoBehaviour:
   minSpawnTime: .100000001
   maxSpawnTime: .5
   speed: .5
+  rotation: 50
 --- !u!4 &282745964
 Transform:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1969930238}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: fa7167ad1da277447ae1b587423485e0, type: 3}
   m_PlayOnAwake: 1
@@ -625,6 +626,7 @@ MonoBehaviour:
   minSpawnTime: .100000001
   maxSpawnTime: .5
   speed: .5
+  rotation: 50
 --- !u!4 &2120403456
 Transform:
   m_ObjectHideFlags: 0

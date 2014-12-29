@@ -81,9 +81,6 @@ public class GameManager : MonoBehaviour
 
 	void OnGUI()
 	{
-		//int currentScore = (int)score;
-		//GUI.Label(new Rect(10, 10, 50, 25), "Name: ");
-		//GUI.Label(new Rect(50, 50, 100, 25), "Score " + currentScore.ToString());
 		GUILayout.Label("Score: " + ((int)score).ToString());
 		GUILayout.Label("High Score: " + ((int)highScore).ToString());
 		if(gameOver == true)
