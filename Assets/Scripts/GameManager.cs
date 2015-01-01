@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
 		LoadHighScore();
 		highScore = hs1;
 	}
-
 	void Update () 
 	{
 		if(!gameOver)
@@ -104,8 +103,6 @@ public class GameManager : MonoBehaviour
 			PlayerPrefs.Save();
 			scin = 0;
 		}
-		//PlayerPrefs.SetInt("HighScore", (int)highScore);
-		//PlayerPrefs.Save();
 	}
 	void LoadHighScore()
 	{
@@ -115,7 +112,6 @@ public class GameManager : MonoBehaviour
 		hs4 = PlayerPrefs.GetInt("H4",0);
 		hs5 = PlayerPrefs.GetInt("H5",0);
 	}
-
 	void OnGUI()
 	{
 		GUILayout.Label("Score: " + ((int)score).ToString());

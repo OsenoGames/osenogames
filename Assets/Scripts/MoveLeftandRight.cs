@@ -5,11 +5,6 @@ public class MoveLeftandRight : MonoBehaviour
 {
 	public float speed = 1.0f;
 
-	void Start () 
-	{
-	
-	}
-	
 	void Update () 
 	{
 		//this moves the object left and right based on input and float speed
