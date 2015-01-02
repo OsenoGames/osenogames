@@ -8,6 +8,10 @@ public class AnamateTexture : MonoBehaviour
 
 	void Update () 
 	{
-	renderer.material.mainTextureOffset += speed * Time.deltaTime;
+		if(GameManager.Instance.gameOver == false)
+		{
+			renderer.material.mainTextureOffset += speed * Time.deltaTime;
+		}
+
 	}
 }

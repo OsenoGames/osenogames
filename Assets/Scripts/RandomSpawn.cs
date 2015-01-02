@@ -27,8 +27,19 @@ public class RandomSpawn : MonoBehaviour
 	
 	void SpawnNow () 
 	{
-		Instantiate(things, transform.position + new Vector3(Random.Range(minX, maxX),(Random.Range(minY, maxY))),Quaternion.identity);
-		Invoke("SpawnNow", Random.Range(minSpawnTime, maxSpawnTime));
+		if(GameObject.FindGameObjectWithTag("Player") == null)
+		{
+			speed = 0;
+			minSpawnTime = 0;
+			maxSpawnTime = 0;
+
+		}
+		else
+		{
+			Instantiate(things, transform.position + new Vector3(Random.Range(minX, maxX),(Random.Range(minY, maxY))),Quaternion.identity);
+			Invoke("SpawnNow", Random.Range(minSpawnTime, maxSpawnTime));
+		}
+
 	}
 
 

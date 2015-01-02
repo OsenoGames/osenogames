@@ -3,12 +3,14 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour 
 {
+	public GUIStyle butStyle1;
+	public GUIStyle labStyle1;
 	public float pointPerUnit = 5.0f;
 	public static GameManager Instance;
 	public float gameSpeed = 20.0f;
+	public bool gameOver = false;
 
 	private static float highScore = 0.0f;
-	private bool gameOver = false;
 	private float score = 0.0f;
 	private int hs1 = 0;
 	private int hs2 = 0;
@@ -47,12 +49,13 @@ public class GameManager : MonoBehaviour
 		}
 		if(gameOver)
 		{
+			gameSpeed = 0;
 			SaveScore();
 			SaveHighScore();
-			if(Input.anyKeyDown)
-			{
-				Application.LoadLevel("TitleScreen");
-			}
+			//if(Input.anyKeyDown)
+			//{
+			//	Application.LoadLevel("TitleScreen");
+			//}
 		}
 	}
 	void SaveScore()
@@ -116,9 +119,21 @@ public class GameManager : MonoBehaviour
 	{
 		GUILayout.Label("Score: " + ((int)score).ToString());
 		GUILayout.Label("High Score: " + ((int)highScore).ToString());
+
 		if(gameOver == true)
 		{
-			GUILayout.Label("Game Over!  Press any key to quit...");
+			GUI.Label(new Rect(Screen.width / 2 - 50,100,150,75),"Game Over!", labStyle1);
+			GUI.Label(new Rect(Screen.width / 2 - 50,185,150,75),"Score: " + (int)score, labStyle1);
+
+			if(GUI.Button(new Rect(Screen.width / 2 - 50,310,150,75), "Restart Level"))
+			{
+				Application.LoadLevel(Application.loadedLevel);
+			}
+			if(GUI.Button(new Rect(Screen.width / 2 - 50,400,150,75), "Main Menu"))
+			{
+				Application.LoadLevel("TitleScreen");
+			}
+
 		}
 	}
 }
