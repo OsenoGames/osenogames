@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2a1807ec8b7d5499c49c2892a7d1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyValue: 50
+  destroyValue: 15
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
