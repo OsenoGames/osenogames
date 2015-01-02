@@ -12,6 +12,5 @@ public class AnamateTexture : MonoBehaviour
 		{
 			renderer.material.mainTextureOffset += speed * Time.deltaTime;
 		}
-
 	}
 }

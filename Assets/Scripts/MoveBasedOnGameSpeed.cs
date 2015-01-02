@@ -7,6 +7,9 @@ public class MoveBasedOnGameSpeed : MonoBehaviour
 
 	void Update () 
 	{
-		transform.position += transform.rotation*(direction.normalized*GameManager.Instance.gameSpeed*Time.deltaTime);
+		if(GameManager.Instance.gameOver == false)
+		{
+			transform.position += transform.rotation*(direction.normalized*GameManager.Instance.gameSpeed*Time.deltaTime);
+		}
 	}
 }

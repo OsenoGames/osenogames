@@ -7,7 +7,9 @@ public class MoveLeftandRight : MonoBehaviour
 
 	void Update () 
 	{
-		//this moves the object left and right based on input and float speed
-		transform.position += Vector3.right*Input.GetAxis("Horizontal")*speed*Time.deltaTime;
+		if(GameManager.Instance.gameOver == false)
+		{
+			transform.position += Vector3.right*Input.GetAxis("Horizontal")*speed*Time.deltaTime;
+		}
 	}
 }
