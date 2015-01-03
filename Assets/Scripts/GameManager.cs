@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 	private int hs3 = 0;
 	private int hs4 = 0;
 	private int hs5 = 0;
+	private int speedTimer = 0;
 
 	void Awake () 
 	{
@@ -33,6 +34,12 @@ public class GameManager : MonoBehaviour
 	}
 	void Update () 
 	{
+		speedTimer += 1;
+		if(speedTimer == 1000)
+		{
+			gameSpeed += 10f;
+			speedTimer = 0;
+		}
 		if(!gameOver)
 		{
 			score += pointPerUnit*gameSpeed*Time.deltaTime;
@@ -52,10 +59,6 @@ public class GameManager : MonoBehaviour
 			gameSpeed = 0;
 			SaveScore();
 			SaveHighScore();
-			//if(Input.anyKeyDown)
-			//{
-			//	Application.LoadLevel("TitleScreen");
-			//}
 		}
 	}
 	void SaveScore()
