@@ -23,16 +23,6 @@ public class RandomSpawn : MonoBehaviour
 	{
 		if(GameManager.Instance.gameOver == false)
 		{
-			if(GameManager.Instance.gameSpeed == 40f)
-			{
-				minSpawnTime = 0.07f;
-				maxSpawnTime = 0.2f;
-			}
-			if(GameManager.Instance.gameSpeed == 30f)
-			{
-				minSpawnTime = 0.09f;
-				maxSpawnTime = 0.4f;
-			}
 			Instantiate(things, transform.position + new Vector3(Random.Range(minX, maxX),(Random.Range(minY, maxY))),Quaternion.identity);
 			Invoke("SpawnNow", Random.Range(minSpawnTime, maxSpawnTime));
 		}

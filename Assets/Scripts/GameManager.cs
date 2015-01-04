@@ -35,9 +35,11 @@ public class GameManager : MonoBehaviour
 	void Update () 
 	{
 		speedTimer += 1;
-		if(speedTimer == 1000)
+		if(speedTimer == 100)
 		{
-			gameSpeed += 10f;
+			Time.timeScale += 0.1F;
+			Time.fixedDeltaTime = 0.02F * Time.timeScale;
+			//gameSpeed += 10f;
 			speedTimer = 0;
 		}
 		if(!gameOver)
@@ -56,6 +58,8 @@ public class GameManager : MonoBehaviour
 		}
 		if(gameOver)
 		{
+			Time.timeScale = 1.0F;
+			Time.fixedDeltaTime = 0.02F * Time.timeScale;
 			gameSpeed = 0;
 			SaveScore();
 			SaveHighScore();

@@ -21,14 +21,6 @@ public class ScaleOverTime : MonoBehaviour
 
 		while(t <= time)
 		{
-			if(GameManager.Instance.gameSpeed == 40f)
-			{
-				time = 0.5f;
-			}
-			if(GameManager.Instance.gameSpeed == 30f)
-			{
-				time = 1.5f;
-			}
 			if(GameManager.Instance.gameOver)
 			{
 				time = 0.001f;
