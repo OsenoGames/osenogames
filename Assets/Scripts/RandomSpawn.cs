@@ -10,8 +10,8 @@ public class RandomSpawn : MonoBehaviour
 	public float maxY = 10.0f;
 	public float minSpawnTime = 0.1f;
 	public float maxSpawnTime = 0.5f;
-	public float speed = .5f;
-	public float rotation = 50.0f;
+	//public float speed = .5f;
+	//public float rotation = 50.0f;
 
 
 	void Start () 

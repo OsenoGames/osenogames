@@ -3,21 +3,17 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour 
 {
-	public GUIStyle butStyle1;
 	public GUIStyle labStyle1;
-	public float pointPerUnit = 5.0f;
 	public static GameManager Instance;
-	public float gameSpeed = 20.0f;
 	public bool gameOver = false;
+	public float gameSpeed = 20.0f;
 
-	private static float highScore = 0.0f;
-	private float score = 0.0f;
-	private int hs1 = 0;
-	private int hs2 = 0;
-	private int hs3 = 0;
-	private int hs4 = 0;
-	private int hs5 = 0;
-	private int speedTimer = 0;
+	float pointPerUnit = 5.0f;
+	float highScore = 0.0f;
+	float score = 0.0f;
+	int hs1 = 0; int hs2 = 0; int hs3 = 0;
+	int hs4 = 0; int hs5 = 0;
+	int speedTimer = 0;
 
 	void Awake () 
 	{
@@ -35,11 +31,10 @@ public class GameManager : MonoBehaviour
 	void Update () 
 	{
 		speedTimer += 1;
-		if(speedTimer == 100)
+		if(speedTimer == 500)
 		{
 			Time.timeScale += 0.1F;
 			Time.fixedDeltaTime = 0.02F * Time.timeScale;
-			//gameSpeed += 10f;
 			speedTimer = 0;
 		}
 		if(!gameOver)
@@ -60,7 +55,7 @@ public class GameManager : MonoBehaviour
 		{
 			Time.timeScale = 1.0F;
 			Time.fixedDeltaTime = 0.02F * Time.timeScale;
-			gameSpeed = 0;
+			//gameSpeed = 0;
 			SaveScore();
 			SaveHighScore();
 		}
@@ -129,14 +124,14 @@ public class GameManager : MonoBehaviour
 
 		if(gameOver == true)
 		{
-			GUI.Label(new Rect(Screen.width / 2 - 50,100,150,75),"Game Over!", labStyle1);
-			GUI.Label(new Rect(Screen.width / 2 - 50,185,150,75),"Score: " + (int)score, labStyle1);
+			GUI.Label(new Rect(Screen.width / 2 - 150,100,300,100),"Game Over!", labStyle1);
+			GUI.Label(new Rect(Screen.width / 2 - 200,185,400,100),"Score: " + (int)score, labStyle1);
 
-			if(GUI.Button(new Rect(Screen.width / 2 - 50,310,150,75), "Restart Level"))
+			if(GUI.Button(new Rect(Screen.width / 2 - 75,310,150,75), "Restart Level"))
 			{
 				Application.LoadLevel(Application.loadedLevel);
 			}
-			if(GUI.Button(new Rect(Screen.width / 2 - 50,400,150,75), "Main Menu"))
+			if(GUI.Button(new Rect(Screen.width / 2 - 75,400,150,75), "Main Menu"))
 			{
 				Application.LoadLevel("TitleScreen");
 			}

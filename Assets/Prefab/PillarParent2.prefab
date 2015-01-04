@@ -29,10 +29,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 412398}
   - 33: {fileID: 3312398}
-  - 136: {fileID: 13612398}
   - 23: {fileID: 2312398}
-  - 64: {fileID: 6498512}
-  - 114: {fileID: 11483768}
+  - 64: {fileID: 6444408}
+  - 114: {fileID: 11463768}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Enemy
@@ -48,7 +47,7 @@ Transform:
   m_GameObject: {fileID: 112396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0500000007, y: 1, z: .0500000007}
+  m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
   m_Children:
   - {fileID: 412398}
   m_Father: {fileID: 0}
@@ -107,7 +106,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6498512
+--- !u!64 &6444408
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,9 +114,9 @@ MeshCollider:
   m_GameObject: {fileID: 112398}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 1
+  m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &11412392
@@ -132,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalScale: {x: 1, y: 15, z: 1}
-  time: 3
+  time: 2
 --- !u!114 &11412394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,31 +168,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: -1}
---- !u!114 &11483768
+--- !u!114 &11463768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112398}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e729d22429e9ce048a9505dac045bc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
---- !u!136 &13612398
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112398}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  speed: 50
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
