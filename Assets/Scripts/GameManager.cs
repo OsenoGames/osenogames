@@ -4,6 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour 
 {
 	public GUIStyle labStyle1;
+	public GUIStyle labStyle2;
 	public static GameManager Instance;
 	public bool gameOver = false;
 	public float gameSpeed = 20.0f;
@@ -55,7 +56,6 @@ public class GameManager : MonoBehaviour
 		{
 			Time.timeScale = 1.0F;
 			Time.fixedDeltaTime = 0.02F * Time.timeScale;
-			//gameSpeed = 0;
 			SaveScore();
 			SaveHighScore();
 		}
@@ -119,13 +119,13 @@ public class GameManager : MonoBehaviour
 	}
 	void OnGUI()
 	{
-		GUILayout.Label("Score: " + ((int)score).ToString());
-		GUILayout.Label("High Score: " + ((int)highScore).ToString());
+		GUI.Label(new Rect(10,10,250,45),"Score: " + (int)score,labStyle2);
+		GUI.Label(new Rect(Screen.width / 2- 75,10,250,45),"High Score: " + (int)highScore,labStyle2);
 
 		if(gameOver == true)
 		{
 			GUI.Label(new Rect(Screen.width / 2 - 150,100,300,100),"Game Over!", labStyle1);
-			GUI.Label(new Rect(Screen.width / 2 - 200,185,400,100),"Score: " + (int)score, labStyle1);
+			//GUI.Label(new Rect(Screen.width / 2 - 200,185,400,100),"Score: " + (int)score, labStyle1);
 
 			if(GUI.Button(new Rect(Screen.width / 2 - 75,310,150,75), "Restart Level"))
 			{
