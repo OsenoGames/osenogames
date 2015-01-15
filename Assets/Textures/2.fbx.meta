@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 04843fb1dd6367d499795f5724873564
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: altitude controls
+    100004: blaster cannon
+    100006: Camera
+    100008: control panel
+    100010: control unit
+    100012: engine block
+    100014: Grid
+    100016: main body
+    100018: maneuver
+    100020: outrigger
+    100022: power cell
+    100024: seat
+    100026: steering vanes
+    100028: thrust flap
+    100030: main body_MeshPart0
+    100032: main body_MeshPart1
+    400000: //RootNode
+    400002: altitude controls
+    400004: blaster cannon
+    400006: Camera
+    400008: control panel
+    400010: control unit
+    400012: engine block
+    400014: Grid
+    400016: main body
+    400018: maneuver
+    400020: outrigger
+    400022: power cell
+    400024: seat
+    400026: steering vanes
+    400028: thrust flap
+    400030: main body_MeshPart0
+    400032: main body_MeshPart1
+    2300000: altitude controls
+    2300002: blaster cannon
+    2300004: control panel
+    2300006: control unit
+    2300008: engine block
+    2300010: Grid
+    2300012: main body
+    2300014: maneuver
+    2300016: outrigger
+    2300018: power cell
+    2300020: seat
+    2300022: steering vanes
+    2300024: thrust flap
+    2300026: main body_MeshPart0
+    2300028: main body_MeshPart1
+    3300000: altitude controls
+    3300002: blaster cannon
+    3300004: control panel
+    3300006: control unit
+    3300008: engine block
+    3300010: Grid
+    3300012: main body
+    3300014: maneuver
+    3300016: outrigger
+    3300018: power cell
+    3300020: seat
+    3300022: steering vanes
+    3300024: thrust flap
+    3300026: main body_MeshPart0
+    3300028: main body_MeshPart1
+    4300002: maneuver
+    4300004: engine block
+    4300006: altitude controls
+    4300008: blaster cannon
+    4300010: outrigger
+    4300012: steering vanes
+    4300014: seat
+    4300016: power cell
+    4300018: main body
+    4300020: control unit
+    4300022: thrust flap
+    4300024: control panel
+    4300026: main body_MeshPart0
+    4300028: main body_MeshPart1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
